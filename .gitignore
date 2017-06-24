@@ -1,5 +1,8 @@
 vendor/
 
+## Directory-based project format:
+.idea/
+
 ### Portal
 # Ignore bundler config.
 /portal/.bundle
