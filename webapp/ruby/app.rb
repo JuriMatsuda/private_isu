@@ -9,7 +9,6 @@ module Isuconp
     use Rack::Session::Memcache, autofix_keys: true, secret: ENV['ISUCONP_SESSION_SECRET'] || 'sendagaya'
     use Rack::Flash
     # use Rack::Lineprof
-    use Rack::Lineprof
 
     set :public_folder, File.expand_path('../../public', __FILE__)
 
@@ -149,6 +148,7 @@ module Isuconp
 
     get '/initialize' do
       db_initialize
+
       return 200
     end
 
