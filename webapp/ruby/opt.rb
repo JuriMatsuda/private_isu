@@ -44,3 +44,10 @@ ids.each do |id|
   File.write(path, post[:imgdata])
   print '.'
 end
+
+
+def get_user(user_id)
+  user = db.xquery('SELECT * FROM users WHERE id = ?', user_id).first
+  raise Isucon5::ContentNotFound unless user
+  user
+end

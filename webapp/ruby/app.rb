@@ -3,6 +3,7 @@ require 'mysql2'
 require 'rack-flash'
 require 'shellwords'
 require 'rack-lineprof'
+# require 'pry'
 
 module Isuconp
   class App < Sinatra::Base
@@ -55,6 +56,9 @@ module Isuconp
         sql.each do |s|
           db.prepare(s).execute
         end
+
+        # FileUtils.rm(Dir.glob('../public/image/*'))
+        # @allimages = Dir.glob('../public/image/*')
       end
 
       def try_login(account_name, password)
@@ -148,7 +152,6 @@ module Isuconp
 
     get '/initialize' do
       db_initialize
-
       return 200
     end
 

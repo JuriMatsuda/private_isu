@@ -1,0 +1,5 @@
+ruby/.vendor
+ruby/bundle
+Vagrantfile
+.vagrant/
+public/image
