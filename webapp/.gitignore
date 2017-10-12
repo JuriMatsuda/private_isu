@@ -1,5 +1,5 @@
 ruby/.vendor
-ruby/bundle
+ruby/vendor/bundle
 Vagrantfile
 .bundle/
 .vagrant/
